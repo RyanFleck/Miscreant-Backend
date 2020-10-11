@@ -1,5 +1,7 @@
 # Miscreant-Backend
 
+Corresponding frontend is <https://github.com/RyanFleck/Miscreant-Client>
+
 Conclusions from this experiment:
 
 - It is easy to program a simple TCP game server.
