@@ -34,6 +34,7 @@ function processPlayerLocation(vals) {
 }
 
 function kickPlayersLoop() {
+  console.log(`Active on port ${process.env.PORT || 1984}`);
   player_keys = Object.keys(players);
   // The max time a player can lag is 500ms
   let expiry = Date.now() - 500;
