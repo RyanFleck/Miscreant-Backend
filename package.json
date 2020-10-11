@@ -8,8 +8,5 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
-  },
-  "dependencies": {
-    "@gd-com/utils": "^4.1.1"
   }
 }
