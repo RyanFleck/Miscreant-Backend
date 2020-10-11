@@ -6,6 +6,9 @@
   "repository": "git@github.com:RyanFleck/Miscreant-Backend.git",
   "author": "Ryan Fleck <Ryan.Fleck@protonmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@gd-com/utils": "^4.1.1"
   }
