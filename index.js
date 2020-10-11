@@ -1,6 +1,7 @@
 const WebSocket = require("ws");
 
 const wss = new WebSocket.Server({ port: process.env.PORT || 8080 });
+console.log(`Running on port ${process.env.PORT || 8080}`);
 
 const users = {};
 
