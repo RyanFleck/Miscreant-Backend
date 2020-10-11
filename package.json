@@ -1,0 +1,12 @@
+{
+  "name": "Miscreant-Backend",
+  "version": "1.0.0",
+  "description": "Backend for Miscreant",
+  "main": "index.js",
+  "repository": "git@github.com:RyanFleck/Miscreant-Backend.git",
+  "author": "Ryan Fleck <Ryan.Fleck@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@gd-com/utils": "^4.1.1"
+  }
+}
