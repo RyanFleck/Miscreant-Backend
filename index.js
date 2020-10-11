@@ -41,7 +41,9 @@ function kickPlayersLoop() {
   console.log(`There are ${player_keys.length} people in the lobby`);
   player_keys.forEach(function (uuid) {
     let last_time = players[uuid].last_time;
-    console.log(`Checkin: id ${uuid} was last here at ${last_time}, current time is ${expiry}`);
+    console.log(
+      `Checkin: id ${uuid} was last here at ${last_time}, current time is ${expiry}`
+    );
     if (last_time < expiry) {
       console.log("Kicking player with UUID " + uuid);
       delete players[uuid];
@@ -53,6 +55,11 @@ let server = net.createServer((socket) => {
   const tcpSplit = new StreamTcp();
   socket.pipe(tcpSplit).on("data", (data) => {
     const packet = new Buffer.from(data);
+    const type = packet.readInt16LE(0);
+    if (type !==4) {
+        // Not something relevant to the game, discard.
+        return;
+    }
     const decoded = getVar(packet);
     if (typeof decoded.value == "string") {
       const vals = decoded.value.split(",");
